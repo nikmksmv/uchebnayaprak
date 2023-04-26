@@ -51,11 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>admin1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAuto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAuto.Designer.cs">
+      <DependentUpon>FormAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAdd.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <Compile Include="Форма админа.Designer.cs">
       <DependentUpon>Форма админа.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormAuto.resx">
+      <DependentUpon>FormAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdd.resx">
       <DependentUpon>FormAdd.cs</DependentUpon>
