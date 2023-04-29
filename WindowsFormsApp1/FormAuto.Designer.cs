@@ -33,13 +33,13 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxLogin = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersDataSet = new WindowsFormsApp1.usersDataSet();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.Btn_Log = new System.Windows.Forms.Button();
-            this.usersDataSet = new WindowsFormsApp1.usersDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new WindowsFormsApp1.usersDataSetTableAdapters.usersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,6 +75,16 @@ namespace WindowsFormsApp1
             this.comboBoxLogin.ValueMember = "login";
             this.comboBoxLogin.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.usersDataSet;
+            // 
+            // usersDataSet
+            // 
+            this.usersDataSet.DataSetName = "usersDataSet";
+            this.usersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBoxPass
             // 
             this.textBoxPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -94,16 +104,6 @@ namespace WindowsFormsApp1
             this.Btn_Log.UseVisualStyleBackColor = true;
             this.Btn_Log.Click += new System.EventHandler(this.Btn_Log_Click);
             // 
-            // usersDataSet
-            // 
-            this.usersDataSet.DataSetName = "usersDataSet";
-            this.usersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.usersDataSet;
-            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
@@ -112,6 +112,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(386, 328);
             this.Controls.Add(this.Btn_Log);
             this.Controls.Add(this.textBoxPass);
@@ -121,8 +122,8 @@ namespace WindowsFormsApp1
             this.Name = "FormAutorization";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

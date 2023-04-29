@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
                 string use_date = dateTimePicker2.Value.ToString(); // дата использование
 
                 SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-MGA54G9\SQLEXPRESS; Initial Catalog = maksimov mebeli; Integrated Security=True");
-                string inserquery = "INSERT INTO components (name, description, quantity, arrival_date, use_date) VALUES ('" + name + "','" + description + "','" + quantity + "','" + arrival_date + "','" + use_date + "')";
+                string inserquery = "INSERT INTO components (name, description, quantity, arrival_date, use_date) VALUES ('" + name + "','" + description + "','" + quantity + "','" + arrival_date + "','" + use_date + "')"; //соединение
                 SqlCommand cmd2 = new SqlCommand(inserquery, con);
                 con.Open();
                 cmd2.ExecuteNonQuery();
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
         {
             FormUser frm4 = new FormUser();
             frm4.Show();
-            this.Hide();
+            this.Hide(); //код для перехода в предыдущую форму
         }
     }
 }

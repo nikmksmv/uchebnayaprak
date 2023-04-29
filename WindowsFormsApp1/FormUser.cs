@@ -20,97 +20,106 @@ namespace WindowsFormsApp1
 
         private void FormUser_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "user.components". При необходимости она может быть перемещена или удалена.
-            this.componentsTableAdapter.Fill(this.user.components);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "maksimov_mebeliDataSet4.components". При необходимости она может быть перемещена или удалена.
+            this.componentsTableAdapter.Fill(this.maksimov_mebeliDataSet4.components);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "maksimov_mebeliDataSet3.furniture". При необходимости она может быть перемещена или удалена.
+            this.furnitureTableAdapter.Fill(this.maksimov_mebeliDataSet3.furniture);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "manufactureDataSet.manufacture". При необходимости она может быть перемещена или удалена.
+            this.manufactureTableAdapter.Fill(this.manufactureDataSet.manufacture);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "stockDataSet.stocks". При необходимости она может быть перемещена или удалена.
+            this.stocksTableAdapter.Fill(this.stockDataSet.stocks);
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormUserAdd frm4 = new FormUserAdd();
-            frm4.Show();
-            this.Hide();
+            if (textBox2.Text != "" && textBox3.Text != "")
+            {
+                string component_id = comboBox2.SelectedIndex.ToString(); ; // id комплектующего
+                string adress = textBox2.Text.Trim(); // адрес склада
+                string quantity = textBox3.Text.Trim(); //количество комплектующих
+                string arrival_date = dateTimePicker1.Value.ToString(); //дата поступления
+
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-MGA54G9\SQLEXPRESS; Initial Catalog = maksimov mebeli; Integrated Security=True");
+                string inserquery = "INSERT INTO stocks (component_id, adress, quantity, arrival_date) VALUES ('" + component_id + "','" + adress + "','" + quantity + "','" + arrival_date + "')";
+                SqlCommand cmd2 = new SqlCommand(inserquery, con);
+                con.Open();
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Успешно прошло!");
+                con.Close(); //код добавление информаци про склад
+            }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
-                dataGridView1.Rows.Remove(row);
+                dataGridView1.Rows.Remove(row); //код для удаление
             }
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            componentsTableAdapter.Update(user);
+            stocksTableAdapter.Update(stockDataSet);
             {
-                MessageBox.Show("Изменения сохранены!");
+                MessageBox.Show("Изменения сохранены!"); //код для обновление
             }
-        }
-
-        private void BtnAZ_Click(object sender, EventArgs e)
-        {
-            DataSet ds = new DataSet();
-            SqlConnection con1 = new SqlConnection(@"Data Source=DESKTOP-MGA54G9\SQLEXPRESS; Initial Catalog = maksimov mebeli; Integrated Security=True");
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = new SqlCommand("Select * FROM components Order By name asc", con1);
-            con1.Open();
-            da.Fill(ds, "maksimov mebeli");
-            dataGridView1.DataSource = ds.Tables[0];
-            da.Dispose();
-            con1.Dispose();
-            ds.Dispose();
-        }
-
-        private void BtnZA_Click(object sender, EventArgs e)
-        {
-            DataSet ds = new DataSet();
-            SqlConnection con1 = new SqlConnection(@"Data Source=DESKTOP-MGA54G9\SQLEXPRESS; Initial Catalog = maksimov mebeli; Integrated Security=True");
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = new SqlCommand("Select * FROM components Order By name desc", con1);
-            con1.Open();
-            da.Fill(ds, "maksimov mebeli");
-            dataGridView1.DataSource = ds.Tables[0];
-            da.Dispose();
-            con1.Dispose();
-            ds.Dispose();
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = user.components;
-            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"name LIKE '%{textBoxSearch.Text}%'";
+            dataGridView1.DataSource = stockDataSet.stocks;
+            (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = $"adress LIKE '%{textBoxSearch.Text}%'"; //код для динамического кода
         }
 
-        private void BtnFilter_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-            {
-                dataGridView1.CurrentCell = null;
-                dataGridView1.Rows[i].Visible = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                {
-                    if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox2.Text))
-                    {
-                        dataGridView1.Rows[i].Visible = true;
-                        break;
-                    }
-                }
-
-            }
-        }
 
         private void BtnForward_Click(object sender, EventArgs e)
         {
             FormAutorization frm1 = new FormAutorization();
             frm1.Show();
-            this.Hide();
+            this.Hide(); //код для кнопки "Назад"
         }
 
-        private void BtnSearch_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
+            foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+            {
+                dataGridView2.Rows.Remove(row); //удаление
+            }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            manufactureTableAdapter.Update(manufactureDataSet);
+            {
+                MessageBox.Show("Изменения сохранены!"); //обновление
+            }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = manufactureDataSet.manufacture;
+            (dataGridView2.DataSource as DataTable).DefaultView.RowFilter = $"id_furniture = '{textBox5.Text}'"; //динамический поиск
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox8.Text != "")
+            {
+                string id_furniture = comboBox1.SelectedIndex.ToString(); // мебел
+                string quantity = textBox8.Text.Trim(); // количество
+                string date_of_manufacture = dateTimePicker1.Value.ToString(); //дата изготовление
+
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-MGA54G9\SQLEXPRESS; Initial Catalog = maksimov mebeli; Integrated Security=True");
+                string inserquery = "INSERT INTO manufacture (id_furniture, quantity, date_of_manufacture) VALUES ('" + id_furniture + "','" + quantity + "','" + date_of_manufacture + "')";
+                SqlCommand cmd2 = new SqlCommand(inserquery, con);
+                con.Open();
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Успешно прошло!");
+                con.Close(); //добавление новых записей
+            }
         }
     }
 }

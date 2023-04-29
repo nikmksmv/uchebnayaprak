@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         {
             SqlConnection MaksimovConnectionString = new SqlConnection(@"Data Source=DESKTOP-MGA54G9\SQLEXPRESS; Initial Catalog = maksimov mebeli; Integrated Security=True");
             string query = "Select * FROM users WHERE login='" + comboBoxLogin.Text + "'and password='" + textBoxPass.Text + "'";
-            MaksimovConnectionString.Open(); // соединение 
+            MaksimovConnectionString.Open(); // соединение с базой данных sql
 
             SqlCommand cmd = new SqlCommand(query, MaksimovConnectionString);
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -39,8 +39,8 @@ namespace WindowsFormsApp1
             {
                 while (rdr.Read())
                 {
-                    object Login = rdr.GetValue(0);
-                    object Password = rdr.GetValue(1);
+                    object Login = rdr.GetValue(0); //логин
+                    object Password = rdr.GetValue(1); //пароль
 
                     string login = Login.ToString();
                     string password = Password.ToString();
@@ -62,7 +62,6 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Не правильный пароль", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             }
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -51,6 +51,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>admin1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="combobox1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>combobox1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="complectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>complectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="componentsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>componentsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="componentsdataset1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>componentsdataset1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormAuto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,8 +100,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>maksimov_mebeliDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="maksimov_mebeliDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maksimov_mebeliDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="maksimov_mebeliDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maksimov_mebeliDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="maksimov_mebeliDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maksimov_mebeliDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="maksimov_mebeliDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maksimov_mebeliDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="manufactureDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manufactureDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="manufatcutreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manufatcutreDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mebelDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mebelDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stockDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>stockDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="user.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +193,50 @@
     <None Include="admin1.xss">
       <DependentUpon>admin1.xsd</DependentUpon>
     </None>
+    <None Include="combobox1DataSet.xsc">
+      <DependentUpon>combobox1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="combobox1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>combobox1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="combobox1DataSet.xss">
+      <DependentUpon>combobox1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="complectDataSet.xsc">
+      <DependentUpon>complectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="complectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>complectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="complectDataSet.xss">
+      <DependentUpon>complectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="componentsDataSet.xsc">
+      <DependentUpon>componentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="componentsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>componentsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="componentsDataSet.xss">
+      <DependentUpon>componentsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="componentsdataset1.xsc">
+      <DependentUpon>componentsdataset1.xsd</DependentUpon>
+    </None>
+    <None Include="componentsdataset1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>componentsdataset1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="componentsdataset1.xss">
+      <DependentUpon>componentsdataset1.xsd</DependentUpon>
+    </None>
     <None Include="maksimov_mebeliDataSet.xsc">
       <DependentUpon>maksimov_mebeliDataSet.xsd</DependentUpon>
     </None>
@@ -144,6 +248,83 @@
     <None Include="maksimov_mebeliDataSet.xss">
       <DependentUpon>maksimov_mebeliDataSet.xsd</DependentUpon>
     </None>
+    <None Include="maksimov_mebeliDataSet1.xsc">
+      <DependentUpon>maksimov_mebeliDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>maksimov_mebeliDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="maksimov_mebeliDataSet1.xss">
+      <DependentUpon>maksimov_mebeliDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet2.xsc">
+      <DependentUpon>maksimov_mebeliDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>maksimov_mebeliDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="maksimov_mebeliDataSet2.xss">
+      <DependentUpon>maksimov_mebeliDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet3.xsc">
+      <DependentUpon>maksimov_mebeliDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>maksimov_mebeliDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="maksimov_mebeliDataSet3.xss">
+      <DependentUpon>maksimov_mebeliDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet4.xsc">
+      <DependentUpon>maksimov_mebeliDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="maksimov_mebeliDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>maksimov_mebeliDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="maksimov_mebeliDataSet4.xss">
+      <DependentUpon>maksimov_mebeliDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="manufactureDataSet.xsc">
+      <DependentUpon>manufactureDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="manufactureDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>manufactureDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="manufactureDataSet.xss">
+      <DependentUpon>manufactureDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="manufatcutreDataSet.xsc">
+      <DependentUpon>manufatcutreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="manufatcutreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>manufatcutreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="manufatcutreDataSet.xss">
+      <DependentUpon>manufatcutreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mebelDataSet1.xsc">
+      <DependentUpon>mebelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="mebelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mebelDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mebelDataSet1.xss">
+      <DependentUpon>mebelDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,6 +334,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="stockDataSet.xsc">
+      <DependentUpon>stockDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="stockDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>stockDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="stockDataSet.xss">
+      <DependentUpon>stockDataSet.xsd</DependentUpon>
+    </None>
     <None Include="user.xsc">
       <DependentUpon>user.xsd</DependentUpon>
     </None>

@@ -176,23 +176,25 @@ namespace WindowsFormsApp1
             // BtnForward
             // 
             this.BtnForward.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnForward.BackColor = System.Drawing.Color.GhostWhite;
             this.BtnForward.Location = new System.Drawing.Point(37, 228);
             this.BtnForward.Name = "BtnForward";
             this.BtnForward.Size = new System.Drawing.Size(75, 23);
             this.BtnForward.TabIndex = 18;
             this.BtnForward.Text = "Назад";
-            this.BtnForward.UseVisualStyleBackColor = true;
+            this.BtnForward.UseVisualStyleBackColor = false;
             this.BtnForward.Click += new System.EventHandler(this.BtnForward_Click);
             // 
             // BtnAdd
             // 
             this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdd.BackColor = System.Drawing.Color.GhostWhite;
             this.BtnAdd.Location = new System.Drawing.Point(485, 228);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(75, 23);
             this.BtnAdd.TabIndex = 20;
             this.BtnAdd.Text = "Добавить";
-            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // maksimov_mebeliDataSet
@@ -237,6 +239,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(596, 273);
             this.Controls.Add(this.textBoxID3);
             this.Controls.Add(this.textBoxID2);
@@ -258,6 +261,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.textBoxName);
             this.Name = "FormAdd";
             this.Text = "Форма добавления";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.FormAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.maksimov_mebeliDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.componentsBindingSource)).EndInit();
